@@ -40,7 +40,7 @@ class ApplicationTest extends NsTest {
     }
 
     @Test
-    void 시도_횟수_음수_테스트(){
+    void 시도_횟수_음수_테스트() {
         assertSimpleTest(() ->
                 assertThatThrownBy(() -> runException("pobi,javaji", "-6"))
                         .isInstanceOf(IllegalArgumentException.class)
