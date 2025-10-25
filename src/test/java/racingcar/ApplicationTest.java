@@ -34,7 +34,7 @@ class ApplicationTest extends NsTest {
     @Test
     void 시도_횟수_문자_테스트() {
         assertSimpleTest(() ->
-                assertThatThrownBy(() -> runException("pobi,javaji", "a"))
+                assertThatThrownBy(() -> runException("pobi,java", "a"))
                         .isInstanceOf(IllegalArgumentException.class)
         );
     }
@@ -42,7 +42,7 @@ class ApplicationTest extends NsTest {
     @Test
     void 시도_횟수_음수_테스트() {
         assertSimpleTest(() ->
-                assertThatThrownBy(() -> runException("pobi,javaji", "-6"))
+                assertThatThrownBy(() -> runException("pobi,java", "-6"))
                         .isInstanceOf(IllegalArgumentException.class)
         );
     }
