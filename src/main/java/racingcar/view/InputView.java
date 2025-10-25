@@ -18,8 +18,17 @@ public class InputView {
                 .collect(Collectors.toList());
     }
 
-    public String readTryCountInput(){
+    public int readTryCountInput(){
         System.out.println(INPUT_PROMPT_NUMBER);
-        return Console.readLine();
+        String input = Console.readLine();
+        try {
+            int tryCount = Integer.parseInt(input);
+            if(tryCount < 0){
+                throw new IllegalArgumentException("시도 횟수는 음수가 될 수 없습니다.");
+            }
+            return tryCount;
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("시도 횟수는 문자가 될 수 없습니다.");
+        }
     }
 }
