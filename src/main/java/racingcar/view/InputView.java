@@ -13,6 +13,9 @@ public class InputView {
     public List<String> readCarNameInput(){
         System.out.println(INPUT_PROMPT);
         String input = Console.readLine();
+        if(!input.contains(",")){
+            throw new IllegalArgumentException("이름은 쉼표(,) 기준으로 구분해야 합니다.");
+        }
         return Arrays.stream(input.split(","))
                 .map(String::trim)
                 .collect(Collectors.toList());
