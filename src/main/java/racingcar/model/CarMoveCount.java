@@ -11,10 +11,10 @@ public class CarMoveCount {
         this.randomGenerator = randomGenerator;
     }
 
-    public void moveCar(List<Car> carList){
-        for(Car car : carList){
+    public void moveCar(List<Car> carList) {
+        for (Car car : carList) {
             int randomNumber = randomGenerator.generateRandomNumber();
-            if (randomNumber >= 4){
+            if (randomNumber >= 4) {
                 car.move();
             }
         }

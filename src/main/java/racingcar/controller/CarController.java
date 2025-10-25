@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CarController {
-//    InputView 호출
+    //    InputView 호출
 //    CarMoveCount 호출 - Car와 RandomGenerator 호출됨
 //    TotalCount 호출
 //    OutputView 호출
@@ -20,7 +20,7 @@ public class CarController {
     private final TotalCount totalCount = new TotalCount();
     private final OutputView outputView = new OutputView();
 
-    public void runMain(){
+    public void runMain() {
         List<String> carNames = inputView.readCarNameInput();
         int tryCount = inputView.readTryCountInput();
 
@@ -28,7 +28,7 @@ public class CarController {
                 .map(Car::new)
                 .toList();
 
-        for (int i = 0; i < tryCount; i++){
+        for (int i = 0; i < tryCount; i++) {
             carMoveCount.moveCar(carList);
             outputView.printEachStep(carList);
         }

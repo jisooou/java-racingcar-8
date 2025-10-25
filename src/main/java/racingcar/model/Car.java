@@ -11,25 +11,25 @@ public class Car {
         return carName;
     }
 
-    public Car(String carName){
+    public Car(String carName) {
         validCarName(carName);
         this.carName = carName;
     }
 
-    public void validCarName(String carName){
-        if(carName == null || carName.isBlank()){
+    public void validCarName(String carName) {
+        if (carName == null || carName.isBlank()) {
             throw new IllegalArgumentException("자동차 이름은 공백일 수 없습니다.");
         }
-        if(carName.length() > 5){
+        if (carName.length() > 5) {
             throw new IllegalArgumentException("자동차 이름은 5자 이하만 가능합니다.");
         }
     }
 
-    public void move(){
+    public void move() {
         moveHistory.add("-");
     }
 
-    public String moveHistoryByStep(){
+    public String moveHistoryByStep() {
         return String.join("", moveHistory);
     }
 }
