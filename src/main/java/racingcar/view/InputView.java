@@ -24,6 +24,7 @@ public class InputView {
     public int readTryCountInput() {
         System.out.println(INPUT_PROMPT_NUMBER);
         String input = Console.readLine();
+        System.out.println();
         try {
             int tryCount = Integer.parseInt(input);
             if (tryCount < 0) {

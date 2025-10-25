@@ -28,6 +28,8 @@ public class CarController {
                 .map(Car::new)
                 .toList();
 
+        outputView.printOutputMessage();
+
         for (int i = 0; i < tryCount; i++) {
             carMoveCount.moveCar(carList);
             outputView.printEachStep(carList);

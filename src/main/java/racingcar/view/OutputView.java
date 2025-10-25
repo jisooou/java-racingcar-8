@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class OutputView {
+    public void printOutputMessage() {
+        System.out.println("실행 결과");
+    }
+
     public void printEachStep(List<Car> carList) {
         for (Car car : carList) {
             System.out.println(car.getCarName() + " : " + car.moveHistoryByStep());
