@@ -13,9 +13,17 @@ public class InputView {
     public List<String> readCarNameInput() {
         System.out.println(INPUT_PROMPT);
         String input = Console.readLine();
+        checkSeparateCarNameByComma(input);
+        return parseCarName(input);
+    }
+
+    public void checkSeparateCarNameByComma(String input) {
         if (!input.contains(",")) {
             throw new IllegalArgumentException("이름은 쉼표(,) 기준으로 구분해야 합니다.");
         }
+    }
+
+    public List<String> parseCarName(String input) {
         return Arrays.stream(input.split(","))
                 .map(String::trim)
                 .collect(Collectors.toList());
