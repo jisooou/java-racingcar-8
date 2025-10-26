@@ -14,10 +14,17 @@ public class CarController {
 //    CarMoveCount 호출 - Car와 RandomGenerator 호출됨
 //    TotalCount 호출
 //    OutputView 호출
-    private final InputView inputView = new InputView();
-    private final CarMoveCount carMoveCount = new CarMoveCount(new RandomGenerator());
-    private final TotalCount totalCount = new TotalCount();
-    private final OutputView outputView = new OutputView();
+    private final InputView inputView;
+    private final CarMoveCount carMoveCount;
+    private final TotalCount totalCount;
+    private final OutputView outputView;
+
+    public CarController(InputView inputView, CarMoveCount carMoveCount, TotalCount totalCount, OutputView outputView) {
+        this.inputView = inputView;
+        this.carMoveCount = carMoveCount;
+        this.totalCount = totalCount;
+        this.outputView = outputView;
+    }
 
     public void runMain() {
         List<String> carNames = inputView.readCarNameInput();
