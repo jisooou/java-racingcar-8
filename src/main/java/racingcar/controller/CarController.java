@@ -8,10 +8,9 @@ import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CarController {
-    //    InputView 호출
+//    InputView 호출
 //    CarMoveCount 호출 - Car와 RandomGenerator 호출됨
 //    TotalCount 호출
 //    OutputView 호출
